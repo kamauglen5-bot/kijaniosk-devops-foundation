@@ -1,0 +1,9 @@
+# Dirty state findings:
+# - Users may already exist
+# - Logs directory already exists
+# - Firewall rules already configured
+# - Services may already existScript started on 2026-04-06 08:54:50+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="56" LINES="18"]
+[?2004h]0;glen-kamau@glen-kamau-VirtualBox: ~/kijanikiosk-devops-foundation/week3/friday[01;32mglen-kamau@glen-kamau-VirtualBox[00m:[01;34m~/kijanikiosk-devops-foundation/week3/friday[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-04-06 08:55:05+03:00 [COMMAND_EXIT_CODE="0"]
