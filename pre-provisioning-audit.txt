@@ -1,0 +1,27 @@
+# Expected dirty conditions found in pre-provisioning audit:
+# - kk-api already exists: handled in script
+# - ufw has extra deny 3001 rule: reset in script
+# - ...kk-api:x:995:1001::/home/kk-api:/bin/sh
+kk-payments:x:994:1001::/home/kk-payments:/bin/sh
+kk-logs:x:993:1001::/home/kk-logs:/bin/sh
+kijanikiosk:x:1001:
+ls: cannot open directory '/opt/kijanikiosk/': Permission denied
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22                         ALLOW IN    Anywhere                  
+[ 2] 80                         ALLOW IN    Anywhere                  
+[ 3] 3001                       DENY IN     Anywhere                  
+[ 4] 22 (v6)                    ALLOW IN    Anywhere (v6)             
+[ 5] 80 (v6)                    ALLOW IN    Anywhere (v6)             
+[ 6] 3001 (v6)                  DENY IN     Anywhere (v6)             
+
+kk-api.service                                 disabled        enabled
+  NAME                                                        DESCRIPTION                                                             EXPOSURE
+✗ RemoveIPC=                                                  Service user may leave SysV IPC objects around                               0.1
+✗ RootDirectory=/RootImage=                                   Service runs within the host's root directory                                0.1
+✓ User=/DynamicUser=                                          Service runs under a static non-root user identity                      
+✗ CapabilityBoundingSet=~CAP_SYS_TIME                         Service processes may change the system clock                                0.2
+du: cannot access '/opt/kijanikiosk/shared/logs/': Permission denied
+Archived and active journals take up 78.4M in the file system.
