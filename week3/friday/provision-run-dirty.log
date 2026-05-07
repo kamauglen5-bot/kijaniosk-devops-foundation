@@ -1,0 +1,67 @@
+Phase 1: Packages
+Hit:1 http://ke.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://ke.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://ke.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ufw is already the newest version (0.36.2-6).
+ufw set to manually installed.
+Suggested packages:
+  fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  curl nginx nginx-common
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 791 kB of archives.
+After this operation, 2,130 kB of additional disk space will be used.
+Get:1 http://ke.archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.8 [227 kB]
+Get:2 http://ke.archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx-common all 1.24.0-2ubuntu7.6 [43.5 kB]
+Get:3 http://ke.archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx amd64 1.24.0-2ubuntu7.6 [521 kB]
+Preconfiguring packages ...
+Fetched 791 kB in 2s (448 kB/s)
+Selecting previously unselected package curl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 153177 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.8_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.8) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../nginx-common_1.24.0-2ubuntu7.6_all.deb ...
+Unpacking nginx-common (1.24.0-2ubuntu7.6) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.24.0-2ubuntu7.6_amd64.deb ...
+Unpacking nginx (1.24.0-2ubuntu7.6) ...
+Setting up nginx-common (1.24.0-2ubuntu7.6) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+Setting up curl (8.5.0-2ubuntu10.8) ...
+Setting up nginx (1.24.0-2ubuntu7.6) ...
+ * Upgrading binary nginx       [80G [74G[ OK ]
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for ufw (0.36.2-6) ...
+Phase 2: Users
+Phase 3: Directories
+Phase 4: Systemd
+Phase 5: Firewall
+Backing up 'user.rules' to '/etc/ufw/user.rules.20260406_085809'
+Backing up 'before.rules' to '/etc/ufw/before.rules.20260406_085809'
+Backing up 'after.rules' to '/etc/ufw/after.rules.20260406_085809'
+Backing up 'user6.rules' to '/etc/ufw/user6.rules.20260406_085809'
+Backing up 'before6.rules' to '/etc/ufw/before6.rules.20260406_085809'
+Backing up 'after6.rules' to '/etc/ufw/after6.rules.20260406_085809'
+
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Firewall is active and enabled on system startup
+Phase 6: Logrotate
+Phase 7: Journal
+Phase 8: Health
+{"status":"down"}
+DONE
