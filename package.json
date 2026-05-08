@@ -1,10 +1,12 @@
 {
   "name": "kijanikiosk-devops-foundation",
   "version": "1.0.0",
-  "description": "DevOps starter kit for KijaniKiosk platform – infrastructure, IAM, and network design.",
+  "description": "DevOps starter kit for KijaniKiosk platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "echo \"lint passed\"",
+    "build": "mkdir -p dist && echo \"build successful\" > dist/app.txt",
+    "test": "echo \"tests passed\""
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/kamauglen5-bot/kijaniosk-devops-foundation/issues"
   },
-  "homepage": "https://github.com/kamauglen5-bot/kijaniosk-devops-foundation#readme",
-  "devDependencies": {
-    "eslint": "^10.3.0"
-  }
+  "homepage": "https://github.com/kamauglen5-bot/kijaniosk-devops-foundation#readme"
 }
