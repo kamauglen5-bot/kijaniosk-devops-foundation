@@ -1,4 +1,10 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
 node_modules/
+dist/
+coverage/
+.envnode_modules/
 .terraform/
 *.tfstate
 *.tfvars
