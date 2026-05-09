@@ -81,8 +81,10 @@ registry=${NEXUS_URL}/repository/${NEXUS_REPO}/
 email=ci@example.com
 always-auth=true
 EOF
+export NPM_CONFIG_CACHE=/tmp/.npm
+mkdir -p /tmp/.npm
 
-                    npm publish --registry=${NEXUS_URL}/repository/${NEXUS_REPO}/
+                    npm publish --registry=http://localhost:8081/repository/npm-hosted/
 
                     rm -f .npmrc
                     '''
