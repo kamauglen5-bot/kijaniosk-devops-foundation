@@ -1,0 +1,6 @@
+T0: fault introduced
+T1: rollback triggered
+T2: system restored
+
+Active: blue
+Previous: green
