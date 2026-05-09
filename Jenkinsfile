@@ -16,7 +16,7 @@ pipeline {
 
     environment {
         APP_NAME = 'kijanikiosk-payments'
-        NEXUS_URL = 'http://10.0.2.15:8081'
+        NEXUS_URL = 'http://localhost:8081'
         NEXUS_REPO = 'npm-hosted'
         VERSION = "1.0.${BUILD_NUMBER}-${GIT_COMMIT.take(7)}"
     }
@@ -69,7 +69,8 @@ pipeline {
                 passwordVariable: 'NEXUS_PASS'
             )
         ]) {
-
+export NPM_CONFIG_CACHE=/tmp/.npm
+mkdir -p /tmp/.npm
             sh '''
             export NPM_CONFIG_CACHE=/tmp/.npm
             mkdir -p /tmp/.npm
