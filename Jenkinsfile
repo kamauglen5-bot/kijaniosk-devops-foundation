@@ -1,11 +1,13 @@
 pipeline {
-
     agent {
         docker {
-            image 'node:18.20.2-alpine'
+            image 'node:18.20-alpine'
             args '--network=host'
         }
     }
+    environment {
+    NEXUS_URL = 'http://localhost:8081'
+}
 
     options {
         timestamps()
