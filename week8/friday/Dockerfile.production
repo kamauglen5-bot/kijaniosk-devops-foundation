@@ -1,0 +1,32 @@
+# Build stage
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+RUN npx tsc
+
+
+# Production stage
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN addgroup -S kijani && adduser -S kijani -G kijani
+
+COPY --from=builder /app/dist ./dist
+COPY package*.json ./
+
+RUN npm install --only=production
+
+USER kijani
+
+EXPOSE 3001
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
+CMD wget -qO- http://localhost:3001/health || exit 1
+
+CMD ["node", "dist/index.js"]
