@@ -1,2 +1,2 @@
-# kijaniosk-devops-foundation
+# kijanikiosk-devops-foundation
 DevOps starter kit for KijaniKiosk platform – infrastructure, IAM, and network design.
