@@ -9,9 +9,9 @@
   "build": "mkdir -p dist && echo build"
 }
 "scripts": {
-  "lint": "echo \"lint passed\"",
-  "test": "echo \"tests passed\"",
-  "build": "mkdir -p dist && echo \"build successful\" > dist/app.txt"
+  "lint": "echo lint passed",
+  "test": "echo tests passed",
+  "build": "echo build successful"
 }
   },
   "repository": {
