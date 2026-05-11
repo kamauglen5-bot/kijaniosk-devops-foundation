@@ -1,0 +1,20 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+node_modules/
+dist/
+coverage/
+.envnode_modules/
+.terraform/
+*.tfstate
+*.tfvars
+terraform.tfstate.backup
+# Terraform
+week4/friday/terraform/.terraform/
+week4/friday/terraform/*.tfstate
+week4/friday/terraform/*.log
+
+# Node
+node_modules/
+dist/
+build/
